@@ -7,6 +7,6 @@
  */
 public class Main {
   public static void main(String[] args) {
-    // Prompt user for a input file of the current patch.
+    // Prompt user for a input file of the current patch when file io is learned
   }
 }
