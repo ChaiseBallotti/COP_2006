@@ -25,10 +25,22 @@ import java.util.Scanner;
  *   floating point.
  *   Boolean - true or false, used to flag conditions
  *   Char - (16 bit, Unicode) min '\u0000', max '\uffff'
+ *   
+ *  Scope is what part of the program is able to know and use a variable or not.
+ *  local variables are only accessed in the level or block of code it was 
+ *  written in. global variables are defined outside of a function, and are 
+ *  regarded as bad practice to use.
+ *  
+ *  A variable in programming is name that has an associated location in memory
+ *  with a value stored within that location. 
  */
 
 public class Main {
   public static void main(String[] args) {
+    
+    //finals are initialized once and never changed by the code.
+    final String DPS = " DPS is: ";
+    
     Scanner scan = new Scanner(System.in); // initialize new Scanner object
     
     // Great the use when code starts.
@@ -50,15 +62,25 @@ public class Main {
       }
       else if (answer.equals("no")) {
         System.out.println("Please update the patch file and try again");
-        break;
+        break; // this path should stop the program but I don't know how yet.
       }
       else {
         System.out.println("That is not a valid input, please try again");
       }
     }
     
-    System.out.println("Input a units Atack speed persecond");// this will be automated later
-    double attackSpeed = scan.nextInt();
+    System.out.println("Input a units Atack speed persecond.");// this will be automated later
+    double attackSpeed = scan.nextInt(); // avg will be around .8
+    
+    System.out.println("Next input the units damage.");// this will be automated later
+    int damage = scan.nextInt(); // range from 10 to 300 
+    
+    double damagePerSecond = attackSpeed * damage;
+    
+    
+    String unitName = "Arhi"; // this will be automated later
+    
+    System.out.println(unitName + DPS + damagePerSecond);
     
     // Prompt user for a input file of the current patch when file io is learned
   }
