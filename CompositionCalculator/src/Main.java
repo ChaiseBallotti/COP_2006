@@ -70,7 +70,7 @@ public class Main {
     }
     
     System.out.println("Input a units Atack speed persecond.");// this will be automated later
-    double attackSpeed = scan.nextInt(); // avg will be around .8
+    double attackSpeed = scan.nextDouble(); // avg will be around .8
     
     System.out.println("Next input the units damage.");// this will be automated later
     int damage = scan.nextInt(); // range from 10 to 300 
